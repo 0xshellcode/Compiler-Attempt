@@ -104,6 +104,7 @@ prop(){
     emit(BEGIN, tokenval);
     break;
   case END:
+    emit(END, tokenval); // Print END
     exit(0);
     break;
   default:

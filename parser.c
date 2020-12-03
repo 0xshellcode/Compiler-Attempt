@@ -26,6 +26,8 @@ expr() {
     case '+': 
     case '-':
     case '=':
+    case '<':
+    case '>':
       t = lookahead;
       match(lookahead); 
       term(); 
@@ -101,7 +103,7 @@ prop(){
   case BEGIN:
     match(BEGIN);
     prop();
-    emit(BEGIN, tokenval);
+    emit(BEGIN, tokenval); // Print BEGIN
     break;
   case END:
     emit(END, tokenval); // Print END
@@ -112,15 +114,6 @@ prop(){
     break;
   }
 }
-
-/*opc_props(){
-  prop_list();
-  return;
-}
-
-prop_list(){
-  prop();
-}*/
 
 
 

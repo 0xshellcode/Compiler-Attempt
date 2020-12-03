@@ -9,40 +9,40 @@ emit(int t, int tval) {
   case '-': 
   case '*': 
   case '/':
-    printf("%c \n", t); 
+    printf("[*] %c \n", t); 
     break;
   case '=':
-  printf(":=\n");
+  printf("[*] :=\n");
     break;  
   case DIV:
-    printf("DIV \n"); 
+    printf("[*] DIV \n"); 
     break;
   case MOD:
-    printf("MOD \n"); 
+    printf("[*] MOD \n"); 
     break;
   case IF:
-    printf("Conditional Statement -> if\n");
+    printf("[*] if\n");
     break;
   case THEN:
-    printf("Conditional Statement -> then\n");
+    printf("[*] Then\n");
     break;
   case WHILE:
-    printf("Loop -> while\n");
+    printf("[*] While Loop\n");
     break;
   case DO:
-    printf("Loop -> do\n");
+    printf("[*] Do Loop\n");
     break;
   case BEGIN:
-    printf("This is the -> BEGIN\n");
+    printf("[*] BEGIN\n");
     break;
   case END:
-    printf("This is the -> END\n");
+    printf("[*] END\n");
     break;                      
   case NUM:
-    printf("%d \n", tval); 
+    printf("[*] %d \n", tval); 
     break;
   case ID:
-    printf("%s \n", symtable[tval].lexptr); 
+    printf("[*] %s \n", symtable[tval].lexptr); 
     break;
   default:
     printf("token %d, tokenval %d \n", t, tval);
